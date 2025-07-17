@@ -1,0 +1,14 @@
+.admin-dashboard .sidebar {
+  width: 220px;
+  min-height: 100vh;
+}
+
+.admin-dashboard .nav-link:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+.admin-dashboard .main-content {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}

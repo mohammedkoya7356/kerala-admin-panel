@@ -1,0 +1,32 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d0e, #58c);
+  transition: transform 0.6s ease-in-out;
+  padding: 1rem;
+}
+
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #555;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.toggle-password i:hover {
+  color: #000;
+}
