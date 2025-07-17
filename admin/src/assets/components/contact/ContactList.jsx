@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+// ✅ Load from VITE .env variable
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 const ContactList = () => {
   const [contacts, setContacts] = useState([]);
   const [error, setError] = useState('');
@@ -11,7 +14,7 @@ const ContactList = () => {
 
   const fetchContacts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/contact');
+      const res = await axios.get(`${BASE_URL}/api/contact`);
       setContacts(res.data);
     } catch (err) {
       console.error(err);
@@ -22,7 +25,7 @@ const ContactList = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this contact?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/contact/${id}`);
+        await axios.delete(`${BASE_URL}/api/contact/${id}`);
         setContacts(prev => prev.filter(contact => contact._id !== id));
       } catch (err) {
         console.error("Delete error:", err);
