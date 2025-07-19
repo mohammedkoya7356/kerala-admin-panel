@@ -5,10 +5,10 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/kerala-admin-panel/', // or '/' for Render
+  base: './', // ✅ CORRECT for static hosting like Render
   build: {
     rollupOptions: {
-      input: path.resolve(__dirname, 'index.html'), // 👈 Ensure entry is correct
+      input: path.resolve(__dirname, 'index.html'),
     },
   },
 });
